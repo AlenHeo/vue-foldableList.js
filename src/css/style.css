@@ -4,3 +4,64 @@
     margin: 0;
     padding: 0;
 }
+
+
+/* :: Foldable list with icon */
+
+.list-container ul.list {
+    list-style: none;
+    border-style: double;
+    margin: 0;
+}
+
+.list-container ul.icon-list .icon-row {
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.list-container ul.icon-list .icon-row input.head {
+    display: none;
+}
+
+.list-container ul.icon-list .icon-row label {
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0 0;
+    cursor: pointer;
+}
+
+.list-container ul.icon-list .icon-row label::before {
+    /* icon title - common */
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-left: 8px solid #d73f25;
+    margin: 2px 0 0 8px;
+    float: left;
+}
+
+.list-container ul.icon-list .icon-row input:checked+label::before {
+    /* icon title - selected */
+    border: 8px solid transparent;
+    border-top: 8px solid #d73f25;
+    border-bottom: 0;
+    margin: 8px 4px 0;
+}
+
+.list-container ul.icon-list .icon-row .content {
+    /* icon content - hidden */
+    display: none;
+    color: #666;
+    font-size: 0.9375em;
+    overflow: hidden;
+    padding: 10px 0 10px 30px;
+    box-sizing: border-box;
+    transition: max-height 0.4s;
+}
+
+.list-container ul.icon-list .icon-row input:checked+label+.content {
+    /* icon content - stretched */
+    display: block;
+}
