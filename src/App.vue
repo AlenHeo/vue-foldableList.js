@@ -2,16 +2,18 @@
   <div id="app">
     <img src="./assets/logo.png">
     <HelloWorld/>
+    <FoldableList/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import FoldableList from './components/FoldableList';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    HelloWorld, FoldableList,
   },
 };
 </script>
